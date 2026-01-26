@@ -237,21 +237,10 @@ h2 {
 }
 
 .projects-container {
-  column-count: 3;
-  column-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 20px 0;
-}
-
-@media (max-width: 1024px) {
-  .projects-container {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 640px) {
-  .projects-container {
-    column-count: 1;
-  }
 }
 
 .project-button {
@@ -262,10 +251,8 @@ h2 {
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 20px;
-  break-inside: avoid;
+  flex: 1 1 calc(33.333% - 14px);
+  min-width: 250px;
   text-decoration: none;
 }
 
